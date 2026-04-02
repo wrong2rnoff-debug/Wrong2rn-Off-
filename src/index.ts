@@ -28,7 +28,7 @@ if (!DISCORD_BOT_TOKEN) {
   throw new Error("DISCORD_BOT_TOKEN environment variable is required");
 }
 
-const CREATE_VC_CHANNEL_ID = "1488460094181081139";
+const CREATE_VC_CHANNEL_ID = "1489253077184807254";
 const CATEGORY_ID = "1488459569339301978";
 const NICKNAME_CHANNEL_ID = "1488445742640140428";
 const PERMANENT_VC_ID = "1488548250041712650";
@@ -545,7 +545,7 @@ async function handleModal(interaction: ModalSubmitInteraction) {
   }
 }
 
-const EMBED_COLOR = 0x203236;
+const EMBED_COLOR = 0x0a4939;
 
 const ALLOWED_USER_IDS = new Set([
   "1228125551307395145",
