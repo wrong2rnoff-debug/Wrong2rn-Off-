@@ -548,7 +548,7 @@ async function handleModal(interaction: ModalSubmitInteraction) {
 const EMBED_COLOR = 0x0a4939;
 
 const ALLOWED_USER_IDS = new Set([
-  "1228125551307395145",
+  "985199377041752104",
   "859087100687417365",
   "961981929589186601",
   "760886046375411782",
