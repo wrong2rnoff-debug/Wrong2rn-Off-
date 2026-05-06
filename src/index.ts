@@ -547,13 +547,7 @@ async function handleModal(interaction: ModalSubmitInteraction) {
 
 const EMBED_COLOR = 0x0c0c0c;
 
-const ALLOWED_USER_IDS = new Set([
-  "985199377041752104",
-  "859087100687417365",
-  "761277337584533555",
-  "760886046375411782",
-  "1078355674498609172",
-]);
+const ALLOWED_MOD_ROLE_ID = "1495486715245101086";
 
 function embed(description: string) {
   return new EmbedBuilder().setColor(EMBED_COLOR).setDescription(description);
@@ -645,7 +639,7 @@ client.on("messageCreate", async (message) => {
   if (!message.content.startsWith("?")) return;
 
   // Permission check
-  if (!ALLOWED_USER_IDS.has(message.author.id)) return;
+  if (!message.member?.roles.cache.has(ALLOWED_MOD_ROLE_ID)) return;
 
   const args = message.content.slice(1).trim().split(/\s+/);
   const command = args[0]?.toLowerCase();
